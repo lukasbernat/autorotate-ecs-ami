@@ -1,7 +1,7 @@
 # autorotate-ecs-ami
 Recycles ami's in an ECS cluster in AWS gracefully
 # use cases
-You do run an ECS cluster in aws on a set of ec2 ami's which need to be cycled.
+You do run an ECS cluster in aws on a set of ec2 ami's which need to be cycled gracefully (production servers)
 (new OS ver, updated yum packages, new source ami, new ssh keys, etc)
 # how to run
 a) boto3 will read from ~.aws/config and ~.aws/credentials
