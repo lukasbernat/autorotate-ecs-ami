@@ -9,4 +9,4 @@ b) adjust aws specific names in source
 c) make sure Termination Policies = OldestInstance in your autoscaling group. I did not change it on purpose, since this should be part of conf managment (terraform, ansible, cloudformation etc)
 
 #what it will do
-it will double your autoscaling and service count temporary
+it will double your autoscaling and ecs service count temporary, and once your they equalize, drain the old instances, reduce the ecs service back to initial, and restore autoscaling desired and max counts. due to the oldestinstance term policy, autoscaling will terminate your previous instances.
